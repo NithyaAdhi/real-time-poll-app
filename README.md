@@ -1,27 +1,42 @@
-# RealTimePollApp
+# Real-Time Collaborative Poll App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+A dynamic, real-time polling application built with modern web technologies. Users can create a poll, share a unique link, and watch as votes are cast and results are updated live for everyone to see.
 
-## Code scaffolding
+**Live Demo:** [https://real-time-poll-app-two.vercel.app/](https://real-time-poll-app-two.vercel.app/) 
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+*   **Poll Creation:** A clean, user-friendly form to create a new poll with a question and multiple customizable options.
+*   **Real-Time Voting:** Utilizes WebSockets via Firebase to provide a live voting experience.
+*   **Live Data Visualization:** Poll results are displayed in a dynamic bar chart that updates instantly as new votes are cast.
+*   **Shareable Links:** Each poll generates a unique, shareable URL for easy distribution.
+*   **Responsive Design:** A clean, mobile-first interface that works beautifully on any device.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Tech Stack & Architecture
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This project was built as a full-stack application, demonstrating a range of modern web development skills.
 
-## Running end-to-end tests
+### Frontend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+*   **Framework:** [Angular (v18)](https://angular.dev/)
+*   **State Management:** Angular Signals for efficient, fine-grained reactivity.
+*   **Forms:** Angular Reactive Forms for robust and scalable form handling.
+*   **Routing:** Angular Router for seamless single-page application (SPA) navigation.
+*   **UI Components:** [Angular Material](https://material.angular.io/) for a professional and consistent design system.
+*   **Data Visualization:** [ngx-charts](https://swimlane.github.io/ngx-charts/) for dynamic and animated charts.
+*   **Language:** [TypeScript](https://www.typescriptlang.org/)
 
-## Further help
+### Backend & Database
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+*   **Backend as a Service (BaaS):** [Firebase](https://firebase.google.com/)
+*   **Database:** [Firestore](https://firebase.google.com/docs/firestore) for its real-time, NoSQL database capabilities.
+
+### Deployment & DevOps
+
+*   **Hosting:** [Vercel](https://vercel.com/)
+*   **CI/CD:** Fully automated push-to-deploy pipeline using Vercel's integration with GitHub. Every push to the `main` branch triggers a new build and deployment.
