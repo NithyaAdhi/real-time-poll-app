@@ -4,7 +4,7 @@
 
 A dynamic, real-time polling application built with modern web technologies. Users can create a poll, share a unique link, and watch as votes are cast and results are updated live for everyone to see.
 
-**Live Demo:** [[https://real-time-poll-app-two.vercel.app/](https://real-time-poll-app-two.vercel.app/) ](https://real-time-poll-app-sg5f.vercel.app/)
+**Live Demo:** [[https://real-time-poll-app](https://real-time-poll-app-sg5f.vercel.app/)
 ---
 
 ## Features
