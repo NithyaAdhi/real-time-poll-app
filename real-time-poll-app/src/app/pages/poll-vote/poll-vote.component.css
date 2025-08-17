@@ -1,0 +1,52 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Take up most of the screen height */
+  gap: 16px;
+}
+.error-container {
+  text-align: center;
+  padding: 40px;
+}
+/* Container for the voting page */
+.poll-container {
+  display: flex;
+  flex-direction: row; /* Side-by-side on large screens */
+  gap: 32px;
+  padding: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* The left side with question and buttons */
+.vote-section {
+  flex: 1; /* Take up 1 part of the space */
+}
+
+/* Container for the voting buttons */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.options button {
+  width: 100%;
+}
+
+/* The right side with the chart */
+.chart-container {
+  flex: 2; /* Take up 2 parts of the space, making it wider */
+  min-width: 0; /* Important for flexbox to allow shrinking */
+}
+
+/* --- Mobile Styles --- */
+/* When the screen is 768px wide or less */
+@media (max-width: 768px) {
+  .poll-container {
+    flex-direction: column; /* Stack vertically on small screens */
+  }
+}
