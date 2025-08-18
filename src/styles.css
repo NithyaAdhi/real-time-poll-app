@@ -1,4 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+
+:root {
+  --background-color: #242323; 
+  --surface-color: #1E1E1E;   
+  --primary-color: #673AB7;    
+  --primary-color-hover: #7E57C2;
+  --text-color-primary: #FFFFFF;
+  --text-color-secondary: #B0B0B0;
+  --border-color: #333333;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; 
+  background-color: var(--background-color); 
+  color: var(--text-color-primary);
+}

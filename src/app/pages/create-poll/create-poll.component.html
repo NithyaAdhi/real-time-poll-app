@@ -1,54 +1,72 @@
 <div class="create-poll-container">
-  <h1>Create a New Poll</h1>
+  <div class="container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Create a New Poll</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- 1. The Main Form Container -->
+        <form [formGroup]="pollForm" (ngSubmit)="onSubmit()">
+          <!-- 2. The Question Input -->
+          <mat-form-field appearance="fill">
+            <mat-label>Poll Question</mat-label>
+            <input
+              matInput
+              formControlName="question"
+              placeholder="e.g., What's your favorite framework?"
+            />
+            <mat-error *ngIf="pollForm.get('question')?.hasError('required')">
+              A question is required.
+            </mat-error>
+          </mat-form-field>
 
-  <!-- 1. The Main Form Container -->
-  <form [formGroup]="pollForm" (ngSubmit)="onSubmit()">
+          <!-- 3. The Dynamic Options -->
+          <div formArrayName="options">
+            <mat-label>Options</mat-label>
 
-    <!-- 2. The Question Input -->
-    <mat-form-field appearance="fill">
-      <mat-label>Poll Question</mat-label>
-      <input matInput formControlName="question" placeholder="e.g., What's your favorite framework?">
-      <mat-error *ngIf="pollForm.get('question')?.hasError('required')">
-        A question is required.
-      </mat-error>
-    </mat-form-field>
+            <!-- Loop through each control in the 'options' FormArray -->
+            <div
+              *ngFor="let optionControl of options.controls; let i = index"
+              class="option-row"
+            >
+              <mat-form-field appearance="fill">
+                <mat-label>Option {{ i + 1 }}</mat-label>
 
-    <!-- 3. The Dynamic Options -->
-    <div formArrayName="options">
-      <h3>Options</h3>
+                <!-- Link this input to the control at index 'i' in the FormArray -->
+                <input matInput [formControlName]="i" />
+              </mat-form-field>
 
-      <!-- Loop through each control in the 'options' FormArray -->
-      <div *ngFor="let optionControl of options.controls; let i = index" class="option-row">
-        
-        <mat-form-field appearance="fill">
-          <mat-label>Option {{ i + 1 }}</mat-label>
-          
-          <!-- Link this input to the control at index 'i' in the FormArray -->
-          <input matInput [formControlName]="i">
-        </mat-form-field>
-
-        <!-- Remove Button -->
-        <button mat-icon-button type="button"
+              <!-- Remove Button -->
+              <button
+                mat-icon-button
+                type="button"
                 (click)="removeOption(i)"
                 [disabled]="options.length <= 2"
-                aria-label="Remove option">
-          <mat-icon>remove_circle</mat-icon>
-        </button>
+                aria-label="Remove option"
+              >
+                <mat-icon>remove_circle</mat-icon>
+              </button>
+            </div>
+          </div>
 
-      </div>
-    </div>
+          <!-- 4. Action Buttons -->
+          <div class="action-buttons">
+            <button mat-stroked-button type="button" (click)="addOption()">
+              <mat-icon>add</mat-icon>
+              <span>Add Option</span>
+            </button>
 
-    <!-- 4. Action Buttons -->
-    <div class="action-buttons">
-      <button mat-stroked-button type="button" (click)="addOption()">
-        <mat-icon>add</mat-icon>
-        <span>Add Option</span>
-      </button>
-      
-      <button mat-raised-button color="primary" type="submit" [disabled]="pollForm.invalid">
-        Create Poll
-      </button>
-    </div>
-
-  </form>
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              [disabled]="pollForm.invalid"
+            >
+              Create Poll
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

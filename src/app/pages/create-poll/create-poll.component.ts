@@ -7,19 +7,25 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule, MatCardTitle, MatCardHeader, MatCard, MatCardContent, MatCardSubtitle } from '@angular/material/card';
 
 
 @Component({
   selector: 'app-create-poll',
   standalone: true,  
   imports: [
-    CommonModule, 
+    CommonModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-  ],
+    MatCardTitle,
+    MatCardHeader,
+    MatCard,
+    MatCardContent,
+    MatCardSubtitle
+],
   templateUrl: './create-poll.component.html', 
   styleUrls: ['./create-poll.component.css']    
 })

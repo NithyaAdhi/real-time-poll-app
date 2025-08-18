@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+mat-card {
+  max-width: 600px;
+  width: 100%;
+  color: rgb(212, 209, 213);
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    font-size: large;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
