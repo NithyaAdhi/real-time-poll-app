@@ -40,3 +40,8 @@ This project was built as a full-stack application, demonstrating a range of mod
 
 *   **Hosting:** Vercel
 *   **CI/CD:** Fully automated push-to-deploy pipeline using Vercel's integration with GitHub. Every push to the `main` branch triggers a new build and deployment.
+
+<img width="1262" height="641" alt="image" src="https://github.com/user-attachments/assets/c6db35c2-c953-4759-9d11-2de147754bd1" />
+
+<img width="1885" height="874" alt="image" src="https://github.com/user-attachments/assets/9fcc94da-42ea-4564-8f5f-3d0fc827877e" />
+
